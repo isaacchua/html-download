@@ -36,7 +36,8 @@
 					const link_d = doc.createElement('a')
 					link_d.href = url
 					link_d.innerText = 'Open PDF (blob+download)'
-					link_d.setAttribute('download', 'lorem-ipsum.pdf')
+					const file_name = data_url.slice(data_url.lastIndexOf('/') + 1)
+					link_d.setAttribute('download', file_name)
 					div_d.appendChild(link_d)
 				}
 				catch (err) {
